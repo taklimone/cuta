@@ -9,7 +9,7 @@ A hobby project implementing CUDA kernels.
 ```
 mkdir build && cd build
 cmake ..
-make
+cmake --build .
 ```
 Optionally specify the compute capability four your NVIDIA GPU through `CMAKE_CUDA_FLAGS`.
 ```
