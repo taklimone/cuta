@@ -6,14 +6,11 @@ A hobby project implementing CUDA kernels.
 - CMake >= 3.15
 
 ## Build
+Specify the compute capability four your NVIDIA GPU through `CMAKE_CUDA_FLAGS` like the following.
 ```
 mkdir build && cd build
-cmake ..
-cmake --build .
-```
-Optionally specify the compute capability four your NVIDIA GPU through `CMAKE_CUDA_FLAGS`.
-```
 cmake -DCMAKE_CUDA_FLAGS="-gencode arch=compute_70,code=sm_70" ..
+cmake --build .
 ```
 
 ## Usage
