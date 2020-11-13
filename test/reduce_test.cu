@@ -67,10 +67,8 @@ TEST(ReduceTest, ReduceFloat) {
   EXPECT_FLOAT_EQ(cuta_reduce_sum_test(in.data(), n), static_cast<float>(n));
 }
 
-#if __CUDA_ARCH__ >= 600
 TEST(ReduceTest, ReduceDouble) {
   int n = 256 * 1024 * 1024;
   std::vector<double> in(n, 1.0);
   EXPECT_DOUBLE_EQ(cuta_reduce_sum_test(in.data(), n), static_cast<double>(n));
 }
-#endif
